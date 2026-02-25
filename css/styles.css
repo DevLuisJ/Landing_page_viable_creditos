@@ -30,7 +30,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 0px;
+}
+
+#productos,
+#beneficios {
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -350,6 +355,9 @@ ul {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-card:hover {
@@ -383,8 +391,10 @@ ul {
   font-size: 0.9375rem;
 }
 
-.product-card .btn {
+.product-card .btn,
+.product-card .whatsapp-btn {
   width: 100%;
+  margin-top: auto;
 }
 
 /* Benefits */
