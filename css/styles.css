@@ -193,7 +193,7 @@ ul {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(26, 54, 93, 0.6), rgba(26, 54, 93, 0.85));
+  background: linear-gradient(to bottom, rgba(26, 54, 93, 0.75), rgba(26, 54, 93, 0.95));
 }
 
 .hero__content {
@@ -222,8 +222,42 @@ ul {
 .hero__subtitle {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   line-height: 1.7;
+}
+
+.hero__subtitle strong {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.hero__actions {
+  margin-bottom: 2rem;
+}
+
+.hero__micro-copy {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+.hero__trust-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 50px;
+  color: var(--color-white);
+  font-size: 0.875rem;
+}
+
+.hero__trust-badge svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 /* Trust */
@@ -367,41 +401,58 @@ ul {
 
 .benefit-item {
   display: flex;
-  gap: 1rem;
-  padding: 1.25rem;
-  border-radius: var(--radius);
-  transition: background var(--transition);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 2.5rem 1.5rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
 }
 
 .benefit-item:hover {
-  background: var(--color-bg);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background: var(--color-white);
 }
 
 .benefit-item__icon {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(56, 161, 105, 0.1);
+  color: var(--color-accent);
+  border-radius: 16px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.benefit-item:hover .benefit-item__icon {
   background: var(--color-accent);
   color: var(--color-white);
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 0.875rem;
 }
 
 .benefit-item h3 {
   font-family: var(--font-heading);
-  font-size: 1.0625rem;
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .benefit-item p {
   font-size: 0.9375rem;
   color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.benefits__cta {
+  margin-top: 3.5rem;
+  text-align: center;
 }
 
 /* CTA Section */
